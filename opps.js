@@ -206,78 +206,110 @@
 
 // Encapsulation
 
-class bank {
-  #balance;
+// class bank {
+//   #balance;
 
-  constructor(balanceInfo) {
-    this.#balance = balanceInfo;
-  }
+//   constructor(balanceInfo) {
+//     this.#balance = balanceInfo;
+//   }
 
-  get totalBalance() {
-    return this.#balance;
-  }
+//   get totalBalance() {
+//     return this.#balance;
+//   }
 
-  set totalBalance(value) {
-    if (value !== "") {
-      this.#balance = value;
-      console.log(`Your total balance is ${this.#balance}`);
-    } else {
-      console.log("empty amount Enter the amount");
-    }
-  }
-}
+//   set totalBalance(value) {
+//     if (value !== "") {
+//       this.#balance = value;
+//       console.log(`Your total balance is ${this.#balance}`);
+//     } else {
+//       console.log("empty amount Enter the amount");
+//     }
+//   }
+// }
 
-let balanceInfo = new bank(5000);
+// let balanceInfo = new bank(5000);
 
-console.log(balanceInfo.totalBalance);
+// console.log(balanceInfo.totalBalance);
 
-balanceInfo.totalBalance = 10000;
+// balanceInfo.totalBalance = 10000;
 
-// polimarization
+// // polimarization
 
-class Movie {
-  hero() {
-    console.log("hero of the movie");
-  }
-}
+// class Movie {
+//   hero() {
+//     console.log("hero of the movie");
+//   }
+// }
 
-class Leo extends Movie {
-  hero() {
-    console.log("hero of the movie is vijay !");
-  }
-}
+// class Leo extends Movie {
+//   hero() {
+//     console.log("hero of the movie is vijay !");
+//   }
+// }
 
-class jailer extends Movie {
-  hero() {
-    console.log("hero of the movie is rajini !");
-  }
-}
+// class jailer extends Movie {
+//   hero() {
+//     console.log("hero of the movie is rajini !");
+//   }
+// }
 
-const LeoHero = new Leo();
-LeoHero.hero();
+// const LeoHero = new Leo();
+// LeoHero.hero();
 
-const JailerHero = new jailer();
-JailerHero.hero();
+// const JailerHero = new jailer();
+// JailerHero.hero();
 
-// static
+// // static
 
-class clulation {
-  static sub(a, b) {
-    return a - b;
-  }
+// class clulation {
+//   static sub(a, b) {
+//     return a - b;
+//   }
 
-  static add(a, b) {
-    return a + b;
-  }
+//   static add(a, b) {
+//     return a + b;
+//   }
 
-  static multi(a, b) {
-    return a * b;
-  }
-}
-console.log(clulation.sub(5, 4));
+//   static multi(a, b) {
+//     return a * b;
+//   }
+// }
+// console.log(clulation.sub(5, 4));
 
-console.log(clulation.add(5, 5));
+// console.log(clulation.add(5, 5));
 
-console.log(clulation.multi(5, 5));
+// console.log(clulation.multi(5, 5));
 
 // abbsrtaction
+
+
+class usernfo{
+
+  
+ 
+    constructor(name,pass){
+
+        this.name=name
+        this.password=pass; 
+    }
+
+     get passwordinfo(){
+
+        console.log( this.name,this.password);
+        
+    }
+
+    #passwordinfo(pass){
+        return btoa(pass);
+    }
+
+newdeatils(){
+    console.log(this.#passwordinfo());
+     
+}
+
+}
+
+let deails =new usernfo('gopi','gopi@21')
+
+deails.newdeatils();
